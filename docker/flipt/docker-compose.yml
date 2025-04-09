@@ -1,0 +1,9 @@
+services:
+  server:
+    image: docker.flipt.io/flipt/flipt:latest
+    container_name: flipt
+    ports:
+      - "8080:8080"
+      - "9000:9000"
+    volumes:
+      - ./flipt-config.yml:/etc/flipt/config/default.yml
